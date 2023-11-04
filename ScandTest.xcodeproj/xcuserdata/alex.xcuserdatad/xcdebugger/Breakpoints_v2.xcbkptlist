@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "03A766CD-891E-48FD-AD95-807F2535B7CB"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2D3987F-F7A3-451D-A0D5-CC619E25C5FB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScandTest/Model/FirebaseProductFetcher.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "addData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D2D3987F-F7A3-451D-A0D5-CC619E25C5FB - f5e5579cf1dc80f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScandTest.FirebaseProductFetcher.addData() -&gt; ()"
+                  moduleName = "ScandTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alex/XcodeProjects/ScandTest/ScandTest/Model/FirebaseProductFetcher.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "D2D3987F-F7A3-451D-A0D5-CC619E25C5FB - ed651636eaa30619"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ScandTest.FirebaseProductFetcher.addData() -&gt; ()"
+                  moduleName = "ScandTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alex/XcodeProjects/ScandTest/ScandTest/Model/FirebaseProductFetcher.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "87">
+               </Location>
+               <Location
+                  uuid = "D2D3987F-F7A3-451D-A0D5-CC619E25C5FB - f5e5579cf1dc80f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScandTest.FirebaseProductFetcher.addData() -&gt; ()"
+                  moduleName = "ScandTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alex/XcodeProjects/ScandTest/ScandTest/Model/FirebaseProductFetcher.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58CB3DB1-0631-4231-A9CF-ADC3D7607E39"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScandTest/Model/FirebaseProductNetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "addProduct(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "58CB3DB1-0631-4231-A9CF-ADC3D7607E39 - 71316b7134e9818d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for ScandTest.FirebaseProductNetworkManager.addProduct(ScandTest.Product) async throws -&gt; ()"
+                  moduleName = "ScandTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alex/XcodeProjects/ScandTest/ScandTest/Model/FirebaseProductNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "58CB3DB1-0631-4231-A9CF-ADC3D7607E39 - 754ef7adbf312f3e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () async throws -&gt; () in ScandTest.FirebaseProductNetworkManager.addProduct(ScandTest.Product) async throws -&gt; ()"
+                  moduleName = "ScandTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alex/XcodeProjects/ScandTest/ScandTest/Model/FirebaseProductNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "178">
+               </Location>
+               <Location
+                  uuid = "58CB3DB1-0631-4231-A9CF-ADC3D7607E39 - fc4690f6c236018b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in ScandTest.FirebaseProductNetworkManager.addProduct(ScandTest.Product) async throws -&gt; ()"
+                  moduleName = "ScandTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alex/XcodeProjects/ScandTest/ScandTest/Model/FirebaseProductNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "139">
+               </Location>
+               <Location
+                  uuid = "58CB3DB1-0631-4231-A9CF-ADC3D7607E39 - 71316b7134e9818d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for ScandTest.FirebaseProductNetworkManager.addProduct(ScandTest.Product) async throws -&gt; ()"
+                  moduleName = "ScandTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alex/XcodeProjects/ScandTest/ScandTest/Model/FirebaseProductNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "161">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

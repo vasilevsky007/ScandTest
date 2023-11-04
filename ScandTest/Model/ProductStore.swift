@@ -12,8 +12,11 @@ actor ProductStore {
     
     
     func add(_ product: Product) {
-        guard items.contains(product) else { return }
-        items.append(product)
+        if items.contains(product){
+            update(product)
+        } else {
+            items.append(product)
+        }
     }
     
     func remove(_ productToRemove: Product) {
@@ -21,8 +24,8 @@ actor ProductStore {
         items.remove(at: removingIndex)
     }
     
-    func update(_ productToUpdate: Product, withNew updatedProduct: Product) {
-        if let updatingIndex = items.firstIndex(of: productToUpdate){
+    func update(_ updatedProduct: Product) {
+        if let updatingIndex = items.firstIndex(of: updatedProduct){
             items[updatingIndex] = updatedProduct
         } else {
             add(updatedProduct)

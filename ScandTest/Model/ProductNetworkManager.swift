@@ -11,5 +11,5 @@ protocol ProductNetworkManager {
     func loadAllProducts() async throws  -> [Product]
     func addProduct(_ product: Product) async throws
     func deleteProduct(_ product: Product) async throws
-    func updateProduct(_ product: Product, withNew newProduct: Product) async throws
+    func updateProduct(_ product: Product) async throws
 }
