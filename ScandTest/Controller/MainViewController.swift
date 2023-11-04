@@ -7,13 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
+    let nm = FirebaseProductNetworkManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func touchButton1(_ sender: UIButton) {
 
-
+    }
+    
 }
 
