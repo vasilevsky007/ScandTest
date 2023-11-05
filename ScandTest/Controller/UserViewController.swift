@@ -57,6 +57,28 @@ class UserViewController: UIViewController {
         }
     }
     
+    private weak var sheetPresented: ProductSheet?
+    
+    func openSheet(withProductIndex productIndex: Int) {
+        let viewControllerToPresent = ProductSheet()
+        if let sheet = viewControllerToPresent.sheetPresentationController {
+            sheet.detents = [.medium(), .large()]
+            sheet.largestUndimmedDetentIdentifier = .medium
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            sheet.prefersEdgeAttachedInCompactHeight = true
+            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+            sheet.prefersGrabberVisible = true
+        }
+        if sheetPresented != nil {
+            print("changing")
+            //TODO: figure out why this is working only once
+            sheetPresented?.setup(productsDisplayed[productIndex])
+        }
+        present(viewControllerToPresent, animated: true, completion: nil)
+        sheetPresented = viewControllerToPresent
+        viewControllerToPresent.setup(productsDisplayed[productIndex])
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -103,6 +125,11 @@ extension UserViewController: UICollectionViewDataSource ,UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 8
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //TODO: open a modal
+        openSheet(withProductIndex: indexPath.item)
     }
     
 }

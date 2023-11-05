@@ -31,6 +31,8 @@
 		FAE17DD42AF784DD0040C355 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17DD32AF784DD0040C355 /* AdminViewController.swift */; };
 		FAE17DDF2AF7C5C20040C355 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17DDD2AF7C5C20040C355 /* ProductCell.swift */; };
 		FAE17DE02AF7C5C20040C355 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE17DDE2AF7C5C20040C355 /* ProductCell.xib */; };
+		FAE17E0F2AF7F83B0040C355 /* ProductSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E0D2AF7F83B0040C355 /* ProductSheet.swift */; };
+		FAE17E102AF7F83B0040C355 /* ProductSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE17E0E2AF7F83B0040C355 /* ProductSheet.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		FAE17DD32AF784DD0040C355 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		FAE17DDD2AF7C5C20040C355 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		FAE17DDE2AF7C5C20040C355 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		FAE17E0D2AF7F83B0040C355 /* ProductSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSheet.swift; sourceTree = "<group>"; };
+		FAE17E0E2AF7F83B0040C355 /* ProductSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSheet.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 				FAE17DD12AF784A00040C355 /* UserViewController.swift */,
 				FAE17DD32AF784DD0040C355 /* AdminViewController.swift */,
 				FAE17DDD2AF7C5C20040C355 /* ProductCell.swift */,
+				FAE17E0D2AF7F83B0040C355 /* ProductSheet.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			children = (
 				FA17D8642AF51D1C00FC53C0 /* MainView.storyboard */,
 				FAE17DDE2AF7C5C20040C355 /* ProductCell.xib */,
+				FAE17E0E2AF7F83B0040C355 /* ProductSheet.xib */,
 				FA17D86C2AF51D1F00FC53C0 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -209,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA17D86E2AF51D1F00FC53C0 /* LaunchScreen.storyboard in Resources */,
+				FAE17E102AF7F83B0040C355 /* ProductSheet.xib in Resources */,
 				FA17D86B2AF51D1F00FC53C0 /* Assets.xcassets in Resources */,
 				FAE17DE02AF7C5C20040C355 /* ProductCell.xib in Resources */,
 				FA243E8F2AF6557100D1C647 /* GoogleService-Info.plist in Resources */,
@@ -235,6 +242,7 @@
 				FAE17DDF2AF7C5C20040C355 /* ProductCell.swift in Sources */,
 				FA243E952AF679C200D1C647 /* ProductNetworkManager.swift in Sources */,
 				FA17D8692AF51D1C00FC53C0 /* ScandTest.xcdatamodeld in Sources */,
+				FAE17E0F2AF7F83B0040C355 /* ProductSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
