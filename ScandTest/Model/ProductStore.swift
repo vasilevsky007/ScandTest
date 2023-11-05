@@ -8,8 +8,18 @@
 import Foundation
 
 actor ProductStore {
-    private (set) var items = [Product]()
+    private (set) var items = [Product]() {
+        didSet {
+            storedProductsChanged()
+        }
+    }
     
+    let storedProductsChanged: () -> Void
+    
+    init(items: [Product] = [Product](), storedProductsChanged: @escaping () -> Void) {
+        self.items = items
+        self.storedProductsChanged = storedProductsChanged
+    }
     
     func add(_ product: Product) {
         if items.contains(product){
@@ -26,7 +36,9 @@ actor ProductStore {
     
     func update(_ updatedProduct: Product) {
         if let updatingIndex = items.firstIndex(of: updatedProduct){
-            items[updatingIndex] = updatedProduct
+            if (items[updatingIndex].hashValue != updatedProduct.hashValue){
+                items[updatingIndex] = updatedProduct
+            }
         } else {
             add(updatedProduct)
         }
