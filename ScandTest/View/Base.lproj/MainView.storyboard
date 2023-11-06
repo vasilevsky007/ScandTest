@@ -21,7 +21,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="vpS-C5-eeU"/>
+                        <segue destination="hjQ-ut-jAa" kind="relationship" relationship="viewControllers" id="vpS-C5-eeU"/>
                         <segue destination="jX6-F0-bup" kind="relationship" relationship="viewControllers" id="iXe-dB-Tlh"/>
                     </connections>
                 </tabBarController>
@@ -38,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iFe-YW-gHa">
-                                <rect key="frame" x="16" y="36" width="288" height="483"/>
+                                <rect key="frame" x="16" y="80" width="288" height="439"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="8" minimumInteritemSpacing="8" id="4Oo-QQ-hnd">
                                     <size key="itemSize" width="128" height="128"/>
@@ -47,7 +47,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NVa-XX-7IP">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="NVa-XX-7IP">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bcI-Mb-r2G">
@@ -77,14 +77,14 @@
                             <constraint firstItem="xOn-FZ-vim" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="tBP-sd-ql1"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="User" image="person.fill.questionmark" catalog="system" id="p90-ZT-ASh"/>
+                    <navigationItem key="navigationItem" id="Sgd-wO-Vka"/>
                     <connections>
                         <outlet property="collectionView" destination="iFe-YW-gHa" id="ZHA-8N-2OM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903.75" y="-35.91549295774648"/>
+            <point key="canvasLocation" x="1901.25" y="-35.91549295774648"/>
         </scene>
         <!--Admin Controller-->
         <scene sceneID="PLH-sc-HyP">
@@ -101,6 +101,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVY-vz-iqF" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="114" y="705"/>
+        </scene>
+        <!--User-->
+        <scene sceneID="29v-aT-ycD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hjQ-ut-jAa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="User" image="person.fill.questionmark" catalog="system" id="p90-ZT-ASh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Krg-Fs-5FS">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zr2-rC-Abr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVF-PW-DpJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903.75" y="-35.91549295774648"/>
         </scene>
     </scenes>
     <resources>

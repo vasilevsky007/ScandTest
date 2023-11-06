@@ -43,6 +43,9 @@
                             <rect key="frame" x="0.0" y="0.0" width="53.5" height="34.5"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="tinted" title="Buy"/>
+                            <connections>
+                                <action selector="buyProduct:" destination="-1" eventType="touchUpInside" id="fhK-i2-SZW"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPG-sO-Bs7">
                             <rect key="frame" x="14.5" y="42.5" width="39" height="20.5"/>
