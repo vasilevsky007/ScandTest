@@ -65,18 +65,17 @@ class UserViewController: UIViewController {
             sheet.detents = [.medium(), .large()]
             sheet.largestUndimmedDetentIdentifier = .medium
             sheet.prefersScrollingExpandsWhenScrolledToEdge = false
-            sheet.prefersEdgeAttachedInCompactHeight = true
+            sheet.prefersEdgeAttachedInCompactHeight = false
             sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
             sheet.prefersGrabberVisible = true
         }
         if sheetPresented != nil {
-            print("changing")
-            //TODO: figure out why this is working only once
             sheetPresented?.setup(productsDisplayed[productIndex])
+        } else {
+            present(viewControllerToPresent, animated: true, completion: nil)
+            sheetPresented = viewControllerToPresent
+            viewControllerToPresent.setup(productsDisplayed[productIndex])
         }
-        present(viewControllerToPresent, animated: true, completion: nil)
-        sheetPresented = viewControllerToPresent
-        viewControllerToPresent.setup(productsDisplayed[productIndex])
     }
     
     override func viewDidLoad() {
