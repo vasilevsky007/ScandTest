@@ -3,29 +3,37 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "closure #1 in closure #1 in UserViewController.store.getter:UserViewController.swift">
+         contextName = "ImageFetcher.saveCache():ImageFetcher.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self?.productsDisplayed">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in UserViewController.updateProductsDisplayed():UserViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in MainViewController.touchButton1(_:):MainViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "UserViewController.openSheet(withProductIndex:):UserViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "sheetPresented">
+               value = "imageCache">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "OrderViewController.viewDidLoad():OrderViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in UserViewController.updateProductsDisplayed():UserViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CoreDataUserCacher.load():CoreDataUserCacher.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "users.first">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "UserViewController.saddas(_:):UserViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in MainViewController.touchButton1(_:):MainViewController.swift">
       </ContextState>
       <ContextState
          contextName = "ProductSheet.buyProduct(_:):ProductSheet.swift">
@@ -44,29 +52,29 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "UserViewController.openSheet(withProductIndex:):UserViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sheetPresented">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ImageFetcher.loadCache():ImageFetcher.swift">
       </ContextState>
       <ContextState
-         contextName = "UserViewController.saddas(_:):UserViewController.swift">
+         contextName = "closure #1 in FirebaseRTDBOrderNetworkMananger.getAllOrders(forUserID:):FirebaseRTDBOrderNetworkMananger.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.navigationController">
+               value = "snapshot.children.allObjects">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "CoreDataUserCacher.load():CoreDataUserCacher.swift">
+         contextName = "closure #1 in closure #1 in UserViewController.store.getter:UserViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "users.first">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "ImageFetcher.saveCache():ImageFetcher.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "imageCache">
+               value = "self?.productsDisplayed">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

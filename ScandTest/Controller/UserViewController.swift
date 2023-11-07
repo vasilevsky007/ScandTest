@@ -115,7 +115,7 @@ extension UserViewController: UICollectionViewDataSource ,UICollectionViewDelega
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width
-        let gridItemWidth = (screenWidth - 42) / 2.0
+        let gridItemWidth = (screenWidth - 48) / 2.0
         return CGSize(width: gridItemWidth, height: gridItemWidth)
     }
     

@@ -25,8 +25,11 @@
 		FA243EA22AF67F7A00D1C647 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = FA243EA12AF67F7A00D1C647 /* FirebaseDatabase */; };
 		FA243EA42AF67F7A00D1C647 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FA243EA32AF67F7A00D1C647 /* FirebaseFirestore */; };
 		FA243EA62AF67F7A00D1C647 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = FA243EA52AF67F7A00D1C647 /* FirebaseFirestoreCombine-Community */; };
+		FAB9A4712AFA498B0087BE01 /* AdminOrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9A4702AFA498B0087BE01 /* AdminOrdersTableViewController.swift */; };
+		FAB9A4742AFA4A4A0087BE01 /* AdminOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9A4722AFA4A4A0087BE01 /* AdminOrderCell.swift */; };
+		FAB9A4752AFA4A4A0087BE01 /* AdminOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB9A4732AFA4A4A0087BE01 /* AdminOrderCell.xib */; };
 		FAE17DD22AF784A00040C355 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17DD12AF784A00040C355 /* UserViewController.swift */; };
-		FAE17DD42AF784DD0040C355 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17DD32AF784DD0040C355 /* AdminViewController.swift */; };
+		FAE17DD42AF784DD0040C355 /* AdminAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17DD32AF784DD0040C355 /* AdminAuthController.swift */; };
 		FAE17DDF2AF7C5C20040C355 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17DDD2AF7C5C20040C355 /* ProductCell.swift */; };
 		FAE17DE02AF7C5C20040C355 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE17DDE2AF7C5C20040C355 /* ProductCell.xib */; };
 		FAE17E0F2AF7F83B0040C355 /* ProductSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E0D2AF7F83B0040C355 /* ProductSheet.swift */; };
@@ -57,8 +60,11 @@
 		FA243E8E2AF6557100D1C647 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA243E942AF679C200D1C647 /* ProductNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNetworkManager.swift; sourceTree = "<group>"; };
 		FA243E962AF67AEB00D1C647 /* FirestoreProductNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreProductNetworkManager.swift; sourceTree = "<group>"; };
+		FAB9A4702AFA498B0087BE01 /* AdminOrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOrdersTableViewController.swift; sourceTree = "<group>"; };
+		FAB9A4722AFA4A4A0087BE01 /* AdminOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOrderCell.swift; sourceTree = "<group>"; };
+		FAB9A4732AFA4A4A0087BE01 /* AdminOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminOrderCell.xib; sourceTree = "<group>"; };
 		FAE17DD12AF784A00040C355 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
-		FAE17DD32AF784DD0040C355 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		FAE17DD32AF784DD0040C355 /* AdminAuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminAuthController.swift; sourceTree = "<group>"; };
 		FAE17DDD2AF7C5C20040C355 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		FAE17DDE2AF7C5C20040C355 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		FAE17E0D2AF7F83B0040C355 /* ProductSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSheet.swift; sourceTree = "<group>"; };
@@ -151,7 +157,9 @@
 				FAE17DDD2AF7C5C20040C355 /* ProductCell.swift */,
 				FAE17E0D2AF7F83B0040C355 /* ProductSheet.swift */,
 				FAE17E152AF8E2DB0040C355 /* OrderViewController.swift */,
-				FAE17DD32AF784DD0040C355 /* AdminViewController.swift */,
+				FAE17DD32AF784DD0040C355 /* AdminAuthController.swift */,
+				FAB9A4702AFA498B0087BE01 /* AdminOrdersTableViewController.swift */,
+				FAB9A4722AFA4A4A0087BE01 /* AdminOrderCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 				FAE17DDE2AF7C5C20040C355 /* ProductCell.xib */,
 				FAE17E0E2AF7F83B0040C355 /* ProductSheet.xib */,
 				FAE17E162AF8E2DB0040C355 /* OrderView.xib */,
+				FAB9A4732AFA4A4A0087BE01 /* AdminOrderCell.xib */,
 				FA17D86C2AF51D1F00FC53C0 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -238,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB9A4752AFA4A4A0087BE01 /* AdminOrderCell.xib in Resources */,
 				FAE17E182AF8E2DB0040C355 /* OrderView.xib in Resources */,
 				FA17D86E2AF51D1F00FC53C0 /* LaunchScreen.storyboard in Resources */,
 				FAE17E102AF7F83B0040C355 /* ProductSheet.xib in Resources */,
@@ -257,8 +267,9 @@
 			files = (
 				FAE17E242AF94D050040C355 /* UserCacher.swift in Sources */,
 				FAE17E1A2AF916730040C355 /* UIViewExtension.swift in Sources */,
-				FAE17DD42AF784DD0040C355 /* AdminViewController.swift in Sources */,
+				FAE17DD42AF784DD0040C355 /* AdminAuthController.swift in Sources */,
 				FAE17E1C2AF9280A0040C355 /* Order.swift in Sources */,
+				FAB9A4742AFA4A4A0087BE01 /* AdminOrderCell.swift in Sources */,
 				FAE17E262AF94DBD0040C355 /* CoreDataUserCacher.swift in Sources */,
 				FA17D85F2AF51D1C00FC53C0 /* AppDelegate.swift in Sources */,
 				FA243E8B2AF6500600D1C647 /* Product.swift in Sources */,
@@ -266,6 +277,7 @@
 				FAE17DD22AF784A00040C355 /* UserViewController.swift in Sources */,
 				FAE17E282AF9E06E0040C355 /* ImageFetcher.swift in Sources */,
 				FAE17E1E2AF928B90040C355 /* User.swift in Sources */,
+				FAB9A4712AFA498B0087BE01 /* AdminOrdersTableViewController.swift in Sources */,
 				FA243E8D2AF6527600D1C647 /* ProductStore.swift in Sources */,
 				FAE17E202AF92A1A0040C355 /* OrderNetworkMananger.swift in Sources */,
 				FA243E972AF67AEB00D1C647 /* FirestoreProductNetworkManager.swift in Sources */,

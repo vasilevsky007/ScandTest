@@ -14,12 +14,20 @@ class FirebaseRTDBOrderNetworkMananger: OrderNetworkMananger {
     
     func sendOrder(order: Order) async throws {
         try db.child("orders")
-            .child(order.user.id.uuidString)
             .child(order.id.uuidString)
             .setValue(from: order)
     }
     
-    func getAllOrders(forUserID: UUID? = nil) async throws -> [Order] {
-        []
+    func listenToNewOrders(ordersUpdatedCallback: @escaping (_ allOrders:[Order])->Void) {
+        db.child("orders").observe(.value) { snapshot in
+            var orders = [Order]()
+            _ = snapshot.children.allObjects.map { snapshot in
+                guard let orderSnapshot = snapshot as? DataSnapshot else { return }
+                if let orderConverted = try? orderSnapshot.data(as: Order.self) {
+                    orders.append(orderConverted)
+                }
+            }
+            ordersUpdatedCallback(orders)
+        }
     }
 }

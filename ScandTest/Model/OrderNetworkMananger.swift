@@ -8,7 +8,6 @@
 import Foundation
 
 protocol OrderNetworkMananger {
-    associatedtype ID : Hashable
     func sendOrder(order: Order) async throws
-    func getAllOrders(forUserID: ID?) async throws -> [Order]
+    func listenToNewOrders(ordersUpdatedCallback: @escaping (_ allOrders:[Order])->Void)
 }

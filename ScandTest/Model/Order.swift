@@ -13,11 +13,13 @@ struct Order: Codable, Hashable, Identifiable {
     var products: [Product]
     var user: User
     var comment: String?
+    var time: Date
     
     init(products: [Product], user: User, comment: String?) {
         self.id = UUID()
         self.products = products
         self.user = user
         self.comment = comment
+        self.time = Date.now
     }
 }
