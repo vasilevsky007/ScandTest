@@ -1,0 +1,98 @@
+//
+//  ImageFetcher.swift
+//  ScandTest
+//
+//  Created by Alex on 7.11.23.
+//
+
+import Foundation
+import CoreData
+
+class ImageFetcher {
+    
+    private static var instance: ImageFetcher?
+    
+    private var imageCache: [URL:Data]
+    private var context: NSManagedObjectContext!
+    private let session: URLSession
+    
+    private func saveImageToCoreData(data: Data, url: URL) {
+        let pictureCacheEntity = NSEntityDescription.entity(forEntityName: "PictureCacheEntity", in: context)!
+        let userManagedObject = NSManagedObject(entity: pictureCacheEntity, insertInto: context)
+        userManagedObject.setValue(url.absoluteString, forKey: "url")
+        userManagedObject.setValue(data, forKey: "data")
+        do {
+            try context.save()
+        } catch {
+            print("Error while saving imageCache to Core Data:\n\(error)")
+        }
+    }
+    
+    private func clearCoreData() throws {
+        let fetchRequest: NSFetchRequest<PictureCacheEntity> = PictureCacheEntity.fetchRequest()
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
+        try context.execute(batchDeleteRequest)
+        try context.save()
+    }
+    
+    private func loadCacheFromCoreData() {
+        do {
+            let fetchRequest = NSFetchRequest<PictureCacheEntity>(entityName: "PictureCacheEntity")
+            
+            let pictureCacheEntities = try context.fetch(fetchRequest)
+            print(pictureCacheEntities)
+            _ = pictureCacheEntities.map { pictureCacheEntity in
+                let url = URL(string: pictureCacheEntity.value(forKey: "url") as! String)!
+                let data = pictureCacheEntity.value(forKey: "data") as! Data
+                imageCache.updateValue(data, forKey: url)
+            }
+        } catch {
+            print("error loading cache from core data:\n\(error)")
+        }
+    }
+    
+    private init() {
+        let config = URLSessionConfiguration.default
+        self.session = URLSession(configuration: config)
+        self.imageCache = [:]
+        self.context = nil
+    }
+    
+    static func ImageFetcher(context: NSManagedObjectContext) -> ImageFetcher {
+        if let instance = Self.instance {
+            instance.context = context
+            instance.loadCacheFromCoreData()
+            return instance
+        } else {
+            instance = .init()
+            instance!.context = context
+            instance!.loadCacheFromCoreData()
+            return(Self.instance!)
+        }
+    }
+    
+    private func request(url: URL) -> URLRequest {
+        let request = URLRequest(url: url)
+        //MARK: customize http requust here
+        //f e request.addValue("someValue", forHTTPHeaderField: "Authorization")
+        return request
+    }
+    
+    func imageData(forUrl imageURL: URL) async -> Data? {
+        if let cachedData = imageCache[imageURL] {
+            print("using cached image")
+            return cachedData
+        }
+        do {
+            let (data, _) = try await session.data(for: request(url: imageURL))
+            imageCache.updateValue(data, forKey: imageURL)
+            Task.detached {
+                self.saveImageToCoreData(data: data, url: imageURL)
+            }
+            return data
+        } catch {
+            print("Error loading image from url \(imageURL) :\n\(error)")
+            return nil
+        }
+    }
+}

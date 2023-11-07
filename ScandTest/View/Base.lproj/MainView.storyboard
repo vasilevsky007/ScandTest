@@ -62,7 +62,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <action selector="saddas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kvy-O8-fzi"/>
+                                    <action selector="updateProducts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kvy-O8-fzi"/>
                                 </connections>
                             </button>
                         </subviews>

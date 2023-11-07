@@ -155,9 +155,9 @@
             filePath = "ScandTest/Controller/UserViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "saddas(_:)"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "updateProducts(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -219,9 +219,9 @@
             filePath = "ScandTest/Controller/UserViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "saddas(_:)"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "updateProducts(_:)"
             landmarkType = "7">
             <Locations>
                <Location

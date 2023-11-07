@@ -36,6 +36,17 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "static ImageFetcher.ImageFetcher():ImageFetcher.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Self.instance">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ImageFetcher.loadCache():ImageFetcher.swift">
+      </ContextState>
+      <ContextState
          contextName = "UserViewController.saddas(_:):UserViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -48,6 +59,14 @@
          <PersistentStrings>
             <PersistentString
                value = "users.first">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ImageFetcher.saveCache():ImageFetcher.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "imageCache">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

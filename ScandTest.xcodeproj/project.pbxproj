@@ -40,6 +40,7 @@
 		FAE17E222AF92EB40040C355 /* FirebaseRTDBOrderNetworkMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E212AF92EB40040C355 /* FirebaseRTDBOrderNetworkMananger.swift */; };
 		FAE17E242AF94D050040C355 /* UserCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E232AF94D050040C355 /* UserCacher.swift */; };
 		FAE17E262AF94DBD0040C355 /* CoreDataUserCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E252AF94DBD0040C355 /* CoreDataUserCacher.swift */; };
+		FAE17E282AF9E06E0040C355 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E272AF9E06E0040C355 /* ImageFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		FAE17E212AF92EB40040C355 /* FirebaseRTDBOrderNetworkMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRTDBOrderNetworkMananger.swift; sourceTree = "<group>"; };
 		FAE17E232AF94D050040C355 /* UserCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCacher.swift; sourceTree = "<group>"; };
 		FAE17E252AF94DBD0040C355 /* CoreDataUserCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUserCacher.swift; sourceTree = "<group>"; };
+		FAE17E272AF9E06E0040C355 /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				FAE17E1B2AF9280A0040C355 /* Order.swift */,
 				FAE17E1F2AF92A1A0040C355 /* OrderNetworkMananger.swift */,
 				FAE17E212AF92EB40040C355 /* FirebaseRTDBOrderNetworkMananger.swift */,
+				FAE17E272AF9E06E0040C355 /* ImageFetcher.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				FA243E8B2AF6500600D1C647 /* Product.swift in Sources */,
 				FAE17E172AF8E2DB0040C355 /* OrderViewController.swift in Sources */,
 				FAE17DD22AF784A00040C355 /* UserViewController.swift in Sources */,
+				FAE17E282AF9E06E0040C355 /* ImageFetcher.swift in Sources */,
 				FAE17E1E2AF928B90040C355 /* User.swift in Sources */,
 				FA243E8D2AF6527600D1C647 /* ProductStore.swift in Sources */,
 				FAE17E202AF92A1A0040C355 /* OrderNetworkMananger.swift in Sources */,
@@ -420,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NBYQDHH5LM;
@@ -442,6 +447,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.alex.vasilevski007.ScandTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

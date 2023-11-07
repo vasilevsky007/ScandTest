@@ -11,9 +11,14 @@ class UserViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private let nm: ProductNetworkManager = FirestoreProductNetworkManager()
+    private let imageFetcher: ImageFetcher? = {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
+        let context = appDelegate.persistentContainer.viewContext
+        return ImageFetcher.ImageFetcher(context: context)
+    }()
+    
+    private let productNetworkManager: ProductNetworkManager = FirestoreProductNetworkManager()
     private lazy var store = ProductStore { [weak self] in
-        print("store updated!!!")
         self?.updateProductsDisplayed()
     }
     
@@ -27,21 +32,23 @@ class UserViewController: UIViewController {
     
     private func fetchProductsfromNetwork() async {
         do {
-            let receivedProducts = try await nm.loadAllProducts()
+            let receivedProducts = try await productNetworkManager.loadAllProducts()
             for product in receivedProducts {
                 await store.add(product)
             }
-            await withTaskGroup(of: Void.self) { group in
-                for product in await store.items {
-                    if let photo = product.photo {
-                        switch photo {
-                        case .url(let url):
-                            group.addTask {
-                                //TODO: add photo fetch & cache
-                            }
-                        case .image:
-                            break
+            for product in await store.items {
+                if let photo = product.photo {
+                    switch photo {
+                    case .url(let url):
+                        Task.detached { [weak self] in
+                            //TODO: add photo fetch & cache
+                            var editedProduct = product
+                            editedProduct.photo = await .image(data: self?.imageFetcher?.imageData(forUrl:url))
+                            await self?.store.update(editedProduct)
+                            await self?.collectionView.reloadData()
                         }
+                    case .image:
+                        break
                     }
                 }
             }
@@ -86,21 +93,11 @@ class UserViewController: UIViewController {
         self.collectionView.delegate = self
     }
     
-    @IBAction func saddas(_ sender: UIButton) {
+    @IBAction func updateProducts(_ sender: UIButton) {
         Task.detached {
             await self.fetchProductsfromNetwork()
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
 }
 extension UserViewController: UICollectionViewDataSource ,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -127,7 +124,6 @@ extension UserViewController: UICollectionViewDataSource ,UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //TODO: open a modal
         openSheet(withProductIndex: indexPath.item)
     }
     
