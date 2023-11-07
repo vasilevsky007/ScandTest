@@ -10,7 +10,7 @@ import FirebaseCore
 import FirebaseFirestore
 
 
-class FirebaseProductNetworkManager: ProductNetworkManager {
+class FirestoreProductNetworkManager: ProductNetworkManager {
     
     private let db: Firestore
     

@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #1 in closure #1 in UserViewController.store.getter:UserViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self?.productsDisplayed">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in UserViewController.updateProductsDisplayed():UserViewController.swift">
       </ContextState>
       <ContextState
@@ -17,10 +25,29 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in closure #1 in UserViewController.store.getter:UserViewController.swift">
+         contextName = "OrderViewController.viewDidLoad():OrderViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ProductSheet.buyProduct(_:):ProductSheet.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self?.productsDisplayed">
+               value = "self.presentingViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "UserViewController.saddas(_:):UserViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CoreDataUserCacher.load():CoreDataUserCacher.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "users.first">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

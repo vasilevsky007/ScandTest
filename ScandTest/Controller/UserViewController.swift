@@ -11,7 +11,7 @@ class UserViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private let nm: ProductNetworkManager = FirebaseProductNetworkManager()
+    private let nm: ProductNetworkManager = FirestoreProductNetworkManager()
     private lazy var store = ProductStore { [weak self] in
         print("store updated!!!")
         self?.updateProductsDisplayed()

@@ -16,10 +16,8 @@
 		FA243E8B2AF6500600D1C647 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA243E8A2AF6500600D1C647 /* Product.swift */; };
 		FA243E8D2AF6527600D1C647 /* ProductStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA243E8C2AF6527600D1C647 /* ProductStore.swift */; };
 		FA243E8F2AF6557100D1C647 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA243E8E2AF6557100D1C647 /* GoogleService-Info.plist */; };
-		FA243E912AF675A800D1C647 /* ProductsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA243E902AF675A800D1C647 /* ProductsCacher.swift */; };
-		FA243E932AF678F900D1C647 /* CoreDataProductsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA243E922AF678F900D1C647 /* CoreDataProductsCacher.swift */; };
 		FA243E952AF679C200D1C647 /* ProductNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA243E942AF679C200D1C647 /* ProductNetworkManager.swift */; };
-		FA243E972AF67AEB00D1C647 /* FirebaseProductNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA243E962AF67AEB00D1C647 /* FirebaseProductNetworkManager.swift */; };
+		FA243E972AF67AEB00D1C647 /* FirestoreProductNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA243E962AF67AEB00D1C647 /* FirestoreProductNetworkManager.swift */; };
 		FA243E9A2AF67F7A00D1C647 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FA243E992AF67F7A00D1C647 /* FirebaseAnalytics */; };
 		FA243E9C2AF67F7A00D1C647 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FA243E9B2AF67F7A00D1C647 /* FirebaseAuth */; };
 		FA243E9E2AF67F7A00D1C647 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = FA243E9D2AF67F7A00D1C647 /* FirebaseAuthCombine-Community */; };
@@ -33,6 +31,15 @@
 		FAE17DE02AF7C5C20040C355 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE17DDE2AF7C5C20040C355 /* ProductCell.xib */; };
 		FAE17E0F2AF7F83B0040C355 /* ProductSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E0D2AF7F83B0040C355 /* ProductSheet.swift */; };
 		FAE17E102AF7F83B0040C355 /* ProductSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE17E0E2AF7F83B0040C355 /* ProductSheet.xib */; };
+		FAE17E172AF8E2DB0040C355 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E152AF8E2DB0040C355 /* OrderViewController.swift */; };
+		FAE17E182AF8E2DB0040C355 /* OrderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE17E162AF8E2DB0040C355 /* OrderView.xib */; };
+		FAE17E1A2AF916730040C355 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E192AF916730040C355 /* UIViewExtension.swift */; };
+		FAE17E1C2AF9280A0040C355 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E1B2AF9280A0040C355 /* Order.swift */; };
+		FAE17E1E2AF928B90040C355 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E1D2AF928B90040C355 /* User.swift */; };
+		FAE17E202AF92A1A0040C355 /* OrderNetworkMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E1F2AF92A1A0040C355 /* OrderNetworkMananger.swift */; };
+		FAE17E222AF92EB40040C355 /* FirebaseRTDBOrderNetworkMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E212AF92EB40040C355 /* FirebaseRTDBOrderNetworkMananger.swift */; };
+		FAE17E242AF94D050040C355 /* UserCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E232AF94D050040C355 /* UserCacher.swift */; };
+		FAE17E262AF94DBD0040C355 /* CoreDataUserCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E252AF94DBD0040C355 /* CoreDataUserCacher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,16 +54,23 @@
 		FA243E8A2AF6500600D1C647 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		FA243E8C2AF6527600D1C647 /* ProductStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductStore.swift; sourceTree = "<group>"; };
 		FA243E8E2AF6557100D1C647 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FA243E902AF675A800D1C647 /* ProductsCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCacher.swift; sourceTree = "<group>"; };
-		FA243E922AF678F900D1C647 /* CoreDataProductsCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProductsCacher.swift; sourceTree = "<group>"; };
 		FA243E942AF679C200D1C647 /* ProductNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNetworkManager.swift; sourceTree = "<group>"; };
-		FA243E962AF67AEB00D1C647 /* FirebaseProductNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseProductNetworkManager.swift; sourceTree = "<group>"; };
+		FA243E962AF67AEB00D1C647 /* FirestoreProductNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreProductNetworkManager.swift; sourceTree = "<group>"; };
 		FAE17DD12AF784A00040C355 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		FAE17DD32AF784DD0040C355 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		FAE17DDD2AF7C5C20040C355 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		FAE17DDE2AF7C5C20040C355 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		FAE17E0D2AF7F83B0040C355 /* ProductSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSheet.swift; sourceTree = "<group>"; };
 		FAE17E0E2AF7F83B0040C355 /* ProductSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSheet.xib; sourceTree = "<group>"; };
+		FAE17E152AF8E2DB0040C355 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		FAE17E162AF8E2DB0040C355 /* OrderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderView.xib; sourceTree = "<group>"; };
+		FAE17E192AF916730040C355 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		FAE17E1B2AF9280A0040C355 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		FAE17E1D2AF928B90040C355 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FAE17E1F2AF92A1A0040C355 /* OrderNetworkMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderNetworkMananger.swift; sourceTree = "<group>"; };
+		FAE17E212AF92EB40040C355 /* FirebaseRTDBOrderNetworkMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRTDBOrderNetworkMananger.swift; sourceTree = "<group>"; };
+		FAE17E232AF94D050040C355 /* UserCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCacher.swift; sourceTree = "<group>"; };
+		FAE17E252AF94DBD0040C355 /* CoreDataUserCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUserCacher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +115,7 @@
 				FA243E892AF64BDD00D1C647 /* View */,
 				FA17D85E2AF51D1C00FC53C0 /* AppDelegate.swift */,
 				FA17D8602AF51D1C00FC53C0 /* SceneDelegate.swift */,
+				FAE17E192AF916730040C355 /* UIViewExtension.swift */,
 				FA17D86A2AF51D1F00FC53C0 /* Assets.xcassets */,
 				FA17D86F2AF51D1F00FC53C0 /* Info.plist */,
 				FA17D8672AF51D1C00FC53C0 /* ScandTest.xcdatamodeld */,
@@ -114,10 +129,14 @@
 			children = (
 				FA243E8A2AF6500600D1C647 /* Product.swift */,
 				FA243E8C2AF6527600D1C647 /* ProductStore.swift */,
-				FA243E902AF675A800D1C647 /* ProductsCacher.swift */,
-				FA243E922AF678F900D1C647 /* CoreDataProductsCacher.swift */,
 				FA243E942AF679C200D1C647 /* ProductNetworkManager.swift */,
-				FA243E962AF67AEB00D1C647 /* FirebaseProductNetworkManager.swift */,
+				FA243E962AF67AEB00D1C647 /* FirestoreProductNetworkManager.swift */,
+				FAE17E1D2AF928B90040C355 /* User.swift */,
+				FAE17E232AF94D050040C355 /* UserCacher.swift */,
+				FAE17E252AF94DBD0040C355 /* CoreDataUserCacher.swift */,
+				FAE17E1B2AF9280A0040C355 /* Order.swift */,
+				FAE17E1F2AF92A1A0040C355 /* OrderNetworkMananger.swift */,
+				FAE17E212AF92EB40040C355 /* FirebaseRTDBOrderNetworkMananger.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,9 +145,10 @@
 			isa = PBXGroup;
 			children = (
 				FAE17DD12AF784A00040C355 /* UserViewController.swift */,
-				FAE17DD32AF784DD0040C355 /* AdminViewController.swift */,
 				FAE17DDD2AF7C5C20040C355 /* ProductCell.swift */,
 				FAE17E0D2AF7F83B0040C355 /* ProductSheet.swift */,
+				FAE17E152AF8E2DB0040C355 /* OrderViewController.swift */,
+				FAE17DD32AF784DD0040C355 /* AdminViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -139,6 +159,7 @@
 				FA17D8642AF51D1C00FC53C0 /* MainView.storyboard */,
 				FAE17DDE2AF7C5C20040C355 /* ProductCell.xib */,
 				FAE17E0E2AF7F83B0040C355 /* ProductSheet.xib */,
+				FAE17E162AF8E2DB0040C355 /* OrderView.xib */,
 				FA17D86C2AF51D1F00FC53C0 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -214,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE17E182AF8E2DB0040C355 /* OrderView.xib in Resources */,
 				FA17D86E2AF51D1F00FC53C0 /* LaunchScreen.storyboard in Resources */,
 				FAE17E102AF7F83B0040C355 /* ProductSheet.xib in Resources */,
 				FA17D86B2AF51D1F00FC53C0 /* Assets.xcassets in Resources */,
@@ -230,19 +252,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE17E242AF94D050040C355 /* UserCacher.swift in Sources */,
+				FAE17E1A2AF916730040C355 /* UIViewExtension.swift in Sources */,
 				FAE17DD42AF784DD0040C355 /* AdminViewController.swift in Sources */,
+				FAE17E1C2AF9280A0040C355 /* Order.swift in Sources */,
+				FAE17E262AF94DBD0040C355 /* CoreDataUserCacher.swift in Sources */,
 				FA17D85F2AF51D1C00FC53C0 /* AppDelegate.swift in Sources */,
 				FA243E8B2AF6500600D1C647 /* Product.swift in Sources */,
+				FAE17E172AF8E2DB0040C355 /* OrderViewController.swift in Sources */,
 				FAE17DD22AF784A00040C355 /* UserViewController.swift in Sources */,
+				FAE17E1E2AF928B90040C355 /* User.swift in Sources */,
 				FA243E8D2AF6527600D1C647 /* ProductStore.swift in Sources */,
-				FA243E932AF678F900D1C647 /* CoreDataProductsCacher.swift in Sources */,
-				FA243E912AF675A800D1C647 /* ProductsCacher.swift in Sources */,
-				FA243E972AF67AEB00D1C647 /* FirebaseProductNetworkManager.swift in Sources */,
+				FAE17E202AF92A1A0040C355 /* OrderNetworkMananger.swift in Sources */,
+				FA243E972AF67AEB00D1C647 /* FirestoreProductNetworkManager.swift in Sources */,
 				FA17D8612AF51D1C00FC53C0 /* SceneDelegate.swift in Sources */,
 				FAE17DDF2AF7C5C20040C355 /* ProductCell.swift in Sources */,
 				FA243E952AF679C200D1C647 /* ProductNetworkManager.swift in Sources */,
 				FA17D8692AF51D1C00FC53C0 /* ScandTest.xcdatamodeld in Sources */,
 				FAE17E0F2AF7F83B0040C355 /* ProductSheet.swift in Sources */,
+				FAE17E222AF92EB40040C355 /* FirebaseRTDBOrderNetworkMananger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

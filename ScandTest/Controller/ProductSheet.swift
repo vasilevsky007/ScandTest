@@ -9,16 +9,19 @@ import UIKit
 
 class ProductSheet: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    private var displayedProduct: Product?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     
     
     @IBAction func shareProduct(_ sender: UIButton) {
@@ -42,8 +45,17 @@ class ProductSheet: UIViewController {
         self.dismiss(animated: true)
     }
     
-    
-    private var displayedProduct: Product?
+    @IBAction func buyProduct(_ sender: UIButton) {
+        //MARK: code below has to be changed if structure of views changed
+        if let presenter = self.presentingViewController,
+           let navigation = (presenter as? UITabBarController)?.viewControllers?[0] as? UINavigationController,
+           let product = self.displayedProduct {
+            let orderController = OrderViewController()
+            self.dismiss(animated: true)
+            navigation.pushViewController(orderController, animated: true)
+            orderController.setup(selectedProduct: product)
+        }
+    }
     
     func setup(_ product: Product) {
         if (self.nameLabel as UILabel? != nil) {
