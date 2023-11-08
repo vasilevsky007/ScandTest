@@ -225,53 +225,5 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8AE4E357-9BB4-4713-8EFD-80D86AC2A660"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ScandTest/Controller/AdminProductDBTableViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "accessoryButtonTapped(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8AE4E357-9BB4-4713-8EFD-80D86AC2A660 - ed56b0cebdc65a4a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ScandTest.AdminProductDBTableViewController.accessoryButtonTapped(__C.UIButton) -&gt; ()"
-                  moduleName = "ScandTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alex/XcodeProjects/ScandTest/ScandTest/Controller/AdminProductDBTableViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "176">
-               </Location>
-               <Location
-                  uuid = "8AE4E357-9BB4-4713-8EFD-80D86AC2A660 - ed56b0cebdc65a4a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ScandTest.AdminProductDBTableViewController.accessoryButtonTapped(__C.UIButton) -&gt; ()"
-                  moduleName = "ScandTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alex/XcodeProjects/ScandTest/ScandTest/Controller/AdminProductDBTableViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "110">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

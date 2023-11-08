@@ -72,16 +72,20 @@ class AdminProductDBTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return productsDisplayed.count
+        return productsDisplayed.count + 1
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AdminProductCell", for: indexPath) as! AdminProductCell
-//        cell.accessoryType = .detailButton
-        cell.setup(productsDisplayed[indexPath.row])
         let accessoryButton = UIButton(type: .roundedRect)
-        accessoryButton.setTitle("Save", for: .normal)
+        if indexPath.row == 0 {
+            cell.setup(Product(name: "", price: 0))
+            accessoryButton.setTitle("Add", for: .normal)
+        } else {
+            cell.setup(productsDisplayed[indexPath.row - 1])
+            accessoryButton.setTitle("Save", for: .normal)
+        }
         accessoryButton.addTarget(self, action: #selector(accessoryButtonTapped(_:)), for: .touchUpInside)
         accessoryButton.frame = CGRect(x: 0, y: 0, width: 50, height: 30)
         cell.accessoryView = accessoryButton
@@ -91,7 +95,6 @@ class AdminProductDBTableViewController: UITableViewController {
     @objc func accessoryButtonTapped(_ sender: UIButton) {
         let cell = sender.superview as! AdminProductCell
         let updatedProduct = cell.getUpdatedProduct()
-        print(updatedProduct)
         Task {
             //MARK: mb i should integrate store & NM to make all of this more consistent
             await store.update(updatedProduct)
@@ -106,27 +109,30 @@ class AdminProductDBTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
-        let deleteAction = UIContextualAction(style: .destructive, title: nil) { (action, view, completionHandler) in
-            let product = self.productsDisplayed[indexPath.row]
-            Task {
-                await self.store.remove(product)
-                Task.detached {
-                    do {
-                        try await self.productNetworkManager.deleteProduct(product)
-                    } catch {
-                        print("error while deleting product \(product):\n\(error)")
+        if indexPath.row > 0 {
+            let deleteAction = UIContextualAction(style: .destructive, title: nil) { (action, view, completionHandler) in
+                let product = self.productsDisplayed[indexPath.row - 1]
+                Task {
+                    await self.store.remove(product)
+                    Task.detached {
+                        do {
+                            try await self.productNetworkManager.deleteProduct(product)
+                        } catch {
+                            print("error while deleting product \(product):\n\(error)")
+                        }
                     }
                 }
+                completionHandler(true)
             }
-            completionHandler(true)
+            deleteAction.image = UIImage(systemName: "trash")
+            let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction])
+            return swipeConfiguration
+        } else {
+            return nil
         }
-        deleteAction.image = UIImage(systemName: "trash")
-        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction])
-        return swipeConfiguration
     }
     
-    //MARK: this is working only with default cell.accessoryType = .detailButton
+    //MARK: this is working only with default cell.accessoryType = .detailButton , i wanted to ese chekmark, but its'not calling this((
 //    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
 //        print("accesory tapped")
 //        let tappedCell = tableView.cellForRow(at: indexPath) as! AdminProductCell

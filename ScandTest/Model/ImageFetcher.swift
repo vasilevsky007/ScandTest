@@ -68,7 +68,6 @@ actor ImageFetcher {
             let fetchRequest = NSFetchRequest<PictureCacheEntity>(entityName: "PictureCacheEntity")
             
             let pictureCacheEntities = try context.fetch(fetchRequest)
-            print(pictureCacheEntities)
             _ = pictureCacheEntities.map { pictureCacheEntity in
                 let url = URL(string: pictureCacheEntity.value(forKey: "url") as! String)!
                 let data = pictureCacheEntity.value(forKey: "data") as! Data
