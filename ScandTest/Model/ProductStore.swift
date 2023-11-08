@@ -43,4 +43,8 @@ actor ProductStore {
             add(updatedProduct)
         }
     }
+    
+    func removeAll() {
+        items.removeAll()
+    }
 }

@@ -10,19 +10,24 @@ import UIKit
 class UserViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    private var refresh = UIRefreshControl()
     
     private let imageFetcher: ImageFetcher? = {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
         let context = appDelegate.persistentContainer.viewContext
-        return ImageFetcher.ImageFetcher(context: context)
+        let fetcher = ImageFetcher()
+        Task {
+            await fetcher.setContext(context: context)
+        }
+        return fetcher
     }()
-    
     private let productNetworkManager: ProductNetworkManager = FirestoreProductNetworkManager()
     private lazy var store = ProductStore { [weak self] in
         self?.updateProductsDisplayed()
     }
     
     private var productsDisplayed = [Product]()
+    
     private func updateProductsDisplayed() {
         Task { [weak self] in
             self?.productsDisplayed = await (self?.store.items)!
@@ -33,6 +38,7 @@ class UserViewController: UIViewController {
     private func fetchProductsfromNetwork() async {
         do {
             let receivedProducts = try await productNetworkManager.loadAllProducts()
+            await store.removeAll()
             for product in receivedProducts {
                 await store.add(product)
             }
@@ -41,7 +47,6 @@ class UserViewController: UIViewController {
                     switch photo {
                     case .url(let url):
                         Task.detached { [weak self] in
-                            //TODO: add photo fetch & cache
                             var editedProduct = product
                             editedProduct.photo = await .image(data: self?.imageFetcher?.imageData(forUrl:url))
                             await self?.store.update(editedProduct)
@@ -84,11 +89,17 @@ class UserViewController: UIViewController {
         self.collectionView.register(UINib(nibName: "ProductCell", bundle: nil), forCellWithReuseIdentifier: "ProductCell")
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
+        self.refresh.addTarget(self, action: #selector(fetchProducts), for: .valueChanged)
+        self.refresh.tintColor = .label
+        self.collectionView.addSubview(self.refresh)
+        self.refresh.beginRefreshing()
+        self.fetchProducts()
     }
     
-    @IBAction func updateProducts(_ sender: UIButton) {
-        Task.detached {
-            await self.fetchProductsfromNetwork()
+    @objc func fetchProducts() {
+        Task.detached { [weak self] in
+            await self?.fetchProductsfromNetwork()
+            await self?.refresh.endRefreshing()
         }
     }
     
@@ -109,7 +120,7 @@ extension UserViewController: UICollectionViewDataSource ,UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width
         let gridItemWidth = (screenWidth - 48) / 2.0
-        return CGSize(width: gridItemWidth, height: gridItemWidth)
+        return CGSize(width: gridItemWidth, height: gridItemWidth * 1.5)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

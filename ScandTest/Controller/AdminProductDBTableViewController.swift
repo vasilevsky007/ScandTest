@@ -9,13 +9,15 @@ import UIKit
 
 class AdminProductDBTableViewController: UITableViewController {
     
-    
-    
     private let productNetworkManager: ProductNetworkManager = FirestoreProductNetworkManager()
     private lazy var store = ProductStore { [weak self] in
         self?.updateProductsDisplayed()
     }
+    
+    private var refresh = UIRefreshControl()
+    
     private var productsDisplayed = [Product]()
+    
     private func updateProductsDisplayed() {
         Task { [weak self] in
             self?.productsDisplayed = await (self?.store.items)!
@@ -26,6 +28,7 @@ class AdminProductDBTableViewController: UITableViewController {
     private func fetchProductsfromNetwork() async {
         do {
             let receivedProducts = try await productNetworkManager.loadAllProducts()
+            await store.removeAll()
             for product in receivedProducts {
                 await store.add(product)
             }
@@ -37,17 +40,28 @@ class AdminProductDBTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "AdminProductCell", bundle: nil), forCellReuseIdentifier: "AdminProductCell")
-        Task.detached { [weak self] in
-            await self?.fetchProductsfromNetwork()
-        }
+        self.refresh.addTarget(self, action: #selector(fetchProducts), for: .valueChanged)
+        self.refresh.tintColor = .label
+        self.tableView.addSubview(self.refresh)
+        self.refresh.beginRefreshing()
+        self.fetchProducts()
+        
         
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    @objc func fetchProducts() {
+        Task.detached { [weak self] in
+            await self?.fetchProductsfromNetwork()
+            await self?.refresh.endRefreshing()
+        }
+    }
+    
 
     // MARK: - Table view data source
 

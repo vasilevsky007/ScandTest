@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -75,44 +74,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iFe-YW-gHa">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iFe-YW-gHa">
                                 <rect key="frame" x="16" y="80" width="288" height="439"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="8" minimumInteritemSpacing="8" id="4Oo-QQ-hnd">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dlb-ZL-MEX">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="NVa-XX-7IP">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bcI-Mb-r2G">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOn-FZ-vim">
-                                <rect key="frame" x="117" y="484.5" width="75" height="34.5"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <action selector="updateProducts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kvy-O8-fzi"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iFe-YW-gHa" secondAttribute="bottom" id="NVL-58-DD7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xOn-FZ-vim" secondAttribute="bottom" id="TNS-7T-1L2"/>
                             <constraint firstItem="iFe-YW-gHa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ggo-a0-zQh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iFe-YW-gHa" secondAttribute="trailing" constant="16" id="hGK-kO-uud"/>
                             <constraint firstItem="iFe-YW-gHa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="jJA-V1-t7n"/>
-                            <constraint firstItem="xOn-FZ-vim" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="tBP-sd-ql1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Sgd-wO-Vka"/>
@@ -230,22 +210,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VM1-Rw-tQY">
-                                <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VM1-Rw-tQY" id="kgS-vq-uTs">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="Slp-LQ-Srg" id="SIk-CJ-yqh"/>
                             <outlet property="delegate" destination="Slp-LQ-Srg" id="PZQ-kw-bAT"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Database" selectedImage="server.rack" catalog="system" id="n9i-Ck-GPc"/>
+                    <tabBarItem key="tabBarItem" title="Database" image="server.rack" catalog="system" id="n9i-Ck-GPc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFg-MB-Elj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -259,22 +229,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cJt-Ce-EQk" customClass="AdminOrderCell" customModule="ScandTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cJt-Ce-EQk" id="o2j-xL-Zns">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="wNo-q6-WK4" id="6c7-1c-q7i"/>
                             <outlet property="delegate" destination="wNo-q6-WK4" id="zvG-VB-kS4"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Orders" image="basket" catalog="system" id="Itc-Hb-UVR"/>
+                    <tabBarItem key="tabBarItem" title="Orders" image="captions.bubble" catalog="system" id="Itc-Hb-UVR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCL-ys-Sjo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -302,7 +262,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="basket" catalog="system" width="128" height="108"/>
+        <image name="captions.bubble" catalog="system" width="128" height="110"/>
         <image name="person.crop.square.filled.and.at.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="person.fill.questionmark" catalog="system" width="128" height="102"/>
         <image name="server.rack" catalog="system" width="128" height="93"/>

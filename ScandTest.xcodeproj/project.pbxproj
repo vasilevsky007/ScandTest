@@ -31,8 +31,6 @@
 		FAB9A4772AFACD4D0087BE01 /* AdminProductDBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9A4762AFACD4D0087BE01 /* AdminProductDBTableViewController.swift */; };
 		FAE17DD22AF784A00040C355 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17DD12AF784A00040C355 /* UserViewController.swift */; };
 		FAE17DD42AF784DD0040C355 /* AdminAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17DD32AF784DD0040C355 /* AdminAuthController.swift */; };
-		FAE17DDF2AF7C5C20040C355 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17DDD2AF7C5C20040C355 /* ProductCell.swift */; };
-		FAE17DE02AF7C5C20040C355 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE17DDE2AF7C5C20040C355 /* ProductCell.xib */; };
 		FAE17E0F2AF7F83B0040C355 /* ProductSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E0D2AF7F83B0040C355 /* ProductSheet.swift */; };
 		FAE17E102AF7F83B0040C355 /* ProductSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE17E0E2AF7F83B0040C355 /* ProductSheet.xib */; };
 		FAE17E172AF8E2DB0040C355 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E152AF8E2DB0040C355 /* OrderViewController.swift */; };
@@ -47,6 +45,8 @@
 		FAE17E282AF9E06E0040C355 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E272AF9E06E0040C355 /* ImageFetcher.swift */; };
 		FAF5B23D2AFB7B2D00B3FA38 /* AdminProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5B23B2AFB7B2D00B3FA38 /* AdminProductCell.swift */; };
 		FAF5B23E2AFB7B2D00B3FA38 /* AdminProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF5B23C2AFB7B2D00B3FA38 /* AdminProductCell.xib */; };
+		FAF5B2412AFBC1A400B3FA38 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5B23F2AFBC1A400B3FA38 /* ProductCell.swift */; };
+		FAF5B2422AFBC1A400B3FA38 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF5B2402AFBC1A400B3FA38 /* ProductCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,8 +69,6 @@
 		FAB9A4762AFACD4D0087BE01 /* AdminProductDBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductDBTableViewController.swift; sourceTree = "<group>"; };
 		FAE17DD12AF784A00040C355 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		FAE17DD32AF784DD0040C355 /* AdminAuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminAuthController.swift; sourceTree = "<group>"; };
-		FAE17DDD2AF7C5C20040C355 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
-		FAE17DDE2AF7C5C20040C355 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		FAE17E0D2AF7F83B0040C355 /* ProductSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSheet.swift; sourceTree = "<group>"; };
 		FAE17E0E2AF7F83B0040C355 /* ProductSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSheet.xib; sourceTree = "<group>"; };
 		FAE17E152AF8E2DB0040C355 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +83,8 @@
 		FAE17E272AF9E06E0040C355 /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		FAF5B23B2AFB7B2D00B3FA38 /* AdminProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductCell.swift; sourceTree = "<group>"; };
 		FAF5B23C2AFB7B2D00B3FA38 /* AdminProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminProductCell.xib; sourceTree = "<group>"; };
+		FAF5B23F2AFBC1A400B3FA38 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		FAF5B2402AFBC1A400B3FA38 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				FAE17DD12AF784A00040C355 /* UserViewController.swift */,
-				FAE17DDD2AF7C5C20040C355 /* ProductCell.swift */,
+				FAF5B23F2AFBC1A400B3FA38 /* ProductCell.swift */,
 				FAE17E0D2AF7F83B0040C355 /* ProductSheet.swift */,
 				FAE17E152AF8E2DB0040C355 /* OrderViewController.swift */,
 				FAE17DD32AF784DD0040C355 /* AdminAuthController.swift */,
@@ -176,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				FA17D8642AF51D1C00FC53C0 /* MainView.storyboard */,
-				FAE17DDE2AF7C5C20040C355 /* ProductCell.xib */,
+				FAF5B2402AFBC1A400B3FA38 /* ProductCell.xib */,
 				FAE17E0E2AF7F83B0040C355 /* ProductSheet.xib */,
 				FAE17E162AF8E2DB0040C355 /* OrderView.xib */,
 				FAB9A4732AFA4A4A0087BE01 /* AdminOrderCell.xib */,
@@ -256,13 +256,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF5B2422AFBC1A400B3FA38 /* ProductCell.xib in Resources */,
 				FAB9A4752AFA4A4A0087BE01 /* AdminOrderCell.xib in Resources */,
 				FAE17E182AF8E2DB0040C355 /* OrderView.xib in Resources */,
 				FAF5B23E2AFB7B2D00B3FA38 /* AdminProductCell.xib in Resources */,
 				FA17D86E2AF51D1F00FC53C0 /* LaunchScreen.storyboard in Resources */,
 				FAE17E102AF7F83B0040C355 /* ProductSheet.xib in Resources */,
 				FA17D86B2AF51D1F00FC53C0 /* Assets.xcassets in Resources */,
-				FAE17DE02AF7C5C20040C355 /* ProductCell.xib in Resources */,
 				FA243E8F2AF6557100D1C647 /* GoogleService-Info.plist in Resources */,
 				FA17D8662AF51D1C00FC53C0 /* MainView.storyboard in Resources */,
 			);
@@ -293,10 +293,10 @@
 				FAE17E202AF92A1A0040C355 /* OrderNetworkMananger.swift in Sources */,
 				FA243E972AF67AEB00D1C647 /* FirestoreProductNetworkManager.swift in Sources */,
 				FA17D8612AF51D1C00FC53C0 /* SceneDelegate.swift in Sources */,
-				FAE17DDF2AF7C5C20040C355 /* ProductCell.swift in Sources */,
 				FA243E952AF679C200D1C647 /* ProductNetworkManager.swift in Sources */,
 				FA17D8692AF51D1C00FC53C0 /* ScandTest.xcdatamodeld in Sources */,
 				FAE17E0F2AF7F83B0040C355 /* ProductSheet.swift in Sources */,
+				FAF5B2412AFBC1A400B3FA38 /* ProductCell.swift in Sources */,
 				FAE17E222AF92EB40040C355 /* FirebaseRTDBOrderNetworkMananger.swift in Sources */,
 				FAB9A4772AFACD4D0087BE01 /* AdminProductDBTableViewController.swift in Sources */,
 			);
@@ -457,8 +457,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = MainView;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -477,7 +477,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -494,8 +494,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = MainView;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -513,7 +513,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

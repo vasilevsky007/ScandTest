@@ -148,22 +148,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EEDE1B82-65FD-4591-88CE-964B6FC0B571"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ScandTest/Controller/UserViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "updateProducts(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "EB7E3110-1287-48E7-88C5-30A16C18BD9A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -212,84 +196,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "30414D4D-1D2C-4032-8E61-B9AB18582E88"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ScandTest/Controller/UserViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "updateProducts(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "30414D4D-1D2C-4032-8E61-B9AB18582E88 - ddf1d91db0e1dc89"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ScandTest.UserViewController.saddas(__C.UIButton) -&gt; ()"
-                  moduleName = "ScandTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alex/XcodeProjects/ScandTest/ScandTest/Controller/UserViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "85">
-               </Location>
-               <Location
-                  uuid = "30414D4D-1D2C-4032-8E61-B9AB18582E88 - f5fdc81014932576"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable () async -&gt; () in ScandTest.UserViewController.saddas(__C.UIButton) -&gt; ()"
-                  moduleName = "ScandTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alex/XcodeProjects/ScandTest/ScandTest/Controller/UserViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "50">
-               </Location>
-               <Location
-                  uuid = "30414D4D-1D2C-4032-8E61-B9AB18582E88 - ddf1d91db0e1dc89"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ScandTest.UserViewController.saddas(__C.UIButton) -&gt; ()"
-                  moduleName = "ScandTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alex/XcodeProjects/ScandTest/ScandTest/Controller/UserViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  uuid = "30414D4D-1D2C-4032-8E61-B9AB18582E88 - f5fdc81014932576"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable () async -&gt; () in ScandTest.UserViewController.saddas(__C.UIButton) -&gt; ()"
-                  moduleName = "ScandTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alex/XcodeProjects/ScandTest/ScandTest/Controller/UserViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "60">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "430803CA-5D68-4474-9D9A-D560BC90E340"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -329,9 +235,9 @@
             filePath = "ScandTest/Controller/AdminProductDBTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "accessoryButtonTapped(_:)"
             landmarkType = "7">
             <Locations>
                <Location
