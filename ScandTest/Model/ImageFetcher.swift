@@ -8,13 +8,41 @@
 import Foundation
 import CoreData
 
-class ImageFetcher {
-    
-    private static var instance: ImageFetcher?
+actor ImageFetcher {
     
     private var imageCache: [URL:Data]
     private var context: NSManagedObjectContext!
     private let session: URLSession
+    
+    func setContext(context: NSManagedObjectContext) {
+        self.context = context
+        self.loadCacheFromCoreData()
+    }
+    
+    init() {
+        let config = URLSessionConfiguration.default
+        self.session = URLSession(configuration: config)
+        self.imageCache = [:]
+        self.context = nil
+    }
+    
+    func imageData(forUrl imageURL: URL) async -> Data? {
+        if let cachedData = imageCache[imageURL] {
+            print("using cached image")
+            return cachedData
+        }
+        do {
+            let (data, _) = try await session.data(for: request(url: imageURL))
+            imageCache.updateValue(data, forKey: imageURL)
+            Task.detached {
+                await self.saveImageToCoreData(data: data, url: imageURL)
+            }
+            return data
+        } catch {
+            print("Error loading image from url \(imageURL) :\n\(error)")
+            return nil
+        }
+    }
     
     private func saveImageToCoreData(data: Data, url: URL) {
         let pictureCacheEntity = NSEntityDescription.entity(forEntityName: "PictureCacheEntity", in: context)!
@@ -51,48 +79,10 @@ class ImageFetcher {
         }
     }
     
-    private init() {
-        let config = URLSessionConfiguration.default
-        self.session = URLSession(configuration: config)
-        self.imageCache = [:]
-        self.context = nil
-    }
-    
-    static func ImageFetcher(context: NSManagedObjectContext) -> ImageFetcher {
-        if let instance = Self.instance {
-            instance.context = context
-            instance.loadCacheFromCoreData()
-            return instance
-        } else {
-            instance = .init()
-            instance!.context = context
-            instance!.loadCacheFromCoreData()
-            return(Self.instance!)
-        }
-    }
-    
     private func request(url: URL) -> URLRequest {
         let request = URLRequest(url: url)
         //MARK: customize http requust here
         //f e request.addValue("someValue", forHTTPHeaderField: "Authorization")
         return request
-    }
-    
-    func imageData(forUrl imageURL: URL) async -> Data? {
-        if let cachedData = imageCache[imageURL] {
-            print("using cached image")
-            return cachedData
-        }
-        do {
-            let (data, _) = try await session.data(for: request(url: imageURL))
-            imageCache.updateValue(data, forKey: imageURL)
-            Task.detached {
-                self.saveImageToCoreData(data: data, url: imageURL)
-            }
-            return data
-        } catch {
-            print("Error loading image from url \(imageURL) :\n\(error)")
-            return nil
-        }
     }
 }
