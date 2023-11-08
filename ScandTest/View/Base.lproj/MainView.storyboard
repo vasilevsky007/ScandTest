@@ -144,12 +144,12 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JR0-sn-1jl">
                                         <rect key="frame" x="8" y="57" width="272" height="34"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Pd-Qb-3Th">
                                         <rect key="frame" x="8" y="110.5" width="272" height="34"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="Dxv-04-YzZ">
                                         <rect key="frame" x="8" y="164" width="272" height="34.5"/>
@@ -223,26 +223,39 @@
             <point key="canvasLocation" x="904" y="705"/>
         </scene>
         <!--Database-->
-        <scene sceneID="6In-1d-9Gz">
+        <scene sceneID="fyo-jH-Int">
             <objects>
-                <viewController id="gDT-7O-anM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="e3J-Ei-k0y">
+                <tableViewController id="Slp-LQ-Srg" customClass="AdminProductDBTableViewController" customModule="ScandTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="YcU-wb-lTT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="DSc-Yl-Hwn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Database" image="server.rack" catalog="system" id="N5L-ZV-6Wj"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zKj-hs-mpx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VM1-Rw-tQY">
+                                <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VM1-Rw-tQY" id="kgS-vq-uTs">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Slp-LQ-Srg" id="SIk-CJ-yqh"/>
+                            <outlet property="delegate" destination="Slp-LQ-Srg" id="PZQ-kw-bAT"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Database" selectedImage="server.rack" catalog="system" id="n9i-Ck-GPc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFg-MB-Elj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1701" y="1459"/>
+            <point key="canvasLocation" x="1701" y="1440"/>
         </scene>
         <!--Orders-->
         <scene sceneID="4Ki-qP-9f1">
             <objects>
                 <tableViewController id="wNo-q6-WK4" customClass="AdminOrdersTableViewController" customModule="ScandTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2V7-Xd-Mq7">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2V7-Xd-Mq7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -280,7 +293,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="wNo-q6-WK4" kind="relationship" relationship="viewControllers" id="i8J-iP-Ioj"/>
-                        <segue destination="gDT-7O-anM" kind="relationship" relationship="viewControllers" id="OAy-gv-tw0"/>
+                        <segue destination="Slp-LQ-Srg" kind="relationship" relationship="viewControllers" id="AHJ-Us-twY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zs5-Oi-84k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

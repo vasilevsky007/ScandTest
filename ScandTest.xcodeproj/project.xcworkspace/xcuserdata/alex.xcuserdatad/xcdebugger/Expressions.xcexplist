@@ -14,6 +14,14 @@
          contextName = "OrderViewController.viewDidLoad():OrderViewController.swift">
       </ContextState>
       <ContextState
+         contextName = "AdminProductDBTableViewController.viewDidLoad():AdminProductDBTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationItem">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in UserViewController.updateProductsDisplayed():UserViewController.swift">
       </ContextState>
       <ContextState
@@ -67,6 +75,14 @@
          <PersistentStrings>
             <PersistentString
                value = "snapshot.children.allObjects">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AdminProductDBTableViewController.accessoryButtonTapped(_:):AdminProductDBTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sender.superview as! AdminProductCell">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

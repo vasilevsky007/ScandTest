@@ -22,7 +22,7 @@ class UserViewController: UIViewController {
         self?.updateProductsDisplayed()
     }
     
-    private var productsDisplayed = [Product(name: "Name", price: 9.99)]
+    private var productsDisplayed = [Product]()
     private func updateProductsDisplayed() {
         Task { [weak self] in
             self?.productsDisplayed = await (self?.store.items)!
@@ -52,13 +52,6 @@ class UserViewController: UIViewController {
                     }
                 }
             }
-            
-//                    .addProduct(
-//                    Product(
-//                        name: "pr1",
-//                        price: 0.0,
-//                        photo: .url(URL(string: "https://i.pinimg.com/736x/f4/d2/96/f4d2961b652880be432fb9580891ed62.jpg")!),
-//                        description: "wdjskdf fkklfl qkrjfeljqkf"))
         } catch {
             print("error while loading products from firebase: \(error)")
         }

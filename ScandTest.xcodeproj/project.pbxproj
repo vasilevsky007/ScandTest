@@ -28,6 +28,7 @@
 		FAB9A4712AFA498B0087BE01 /* AdminOrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9A4702AFA498B0087BE01 /* AdminOrdersTableViewController.swift */; };
 		FAB9A4742AFA4A4A0087BE01 /* AdminOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9A4722AFA4A4A0087BE01 /* AdminOrderCell.swift */; };
 		FAB9A4752AFA4A4A0087BE01 /* AdminOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB9A4732AFA4A4A0087BE01 /* AdminOrderCell.xib */; };
+		FAB9A4772AFACD4D0087BE01 /* AdminProductDBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9A4762AFACD4D0087BE01 /* AdminProductDBTableViewController.swift */; };
 		FAE17DD22AF784A00040C355 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17DD12AF784A00040C355 /* UserViewController.swift */; };
 		FAE17DD42AF784DD0040C355 /* AdminAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17DD32AF784DD0040C355 /* AdminAuthController.swift */; };
 		FAE17DDF2AF7C5C20040C355 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17DDD2AF7C5C20040C355 /* ProductCell.swift */; };
@@ -44,6 +45,8 @@
 		FAE17E242AF94D050040C355 /* UserCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E232AF94D050040C355 /* UserCacher.swift */; };
 		FAE17E262AF94DBD0040C355 /* CoreDataUserCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E252AF94DBD0040C355 /* CoreDataUserCacher.swift */; };
 		FAE17E282AF9E06E0040C355 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17E272AF9E06E0040C355 /* ImageFetcher.swift */; };
+		FAF5B23D2AFB7B2D00B3FA38 /* AdminProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5B23B2AFB7B2D00B3FA38 /* AdminProductCell.swift */; };
+		FAF5B23E2AFB7B2D00B3FA38 /* AdminProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF5B23C2AFB7B2D00B3FA38 /* AdminProductCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,7 @@
 		FAB9A4702AFA498B0087BE01 /* AdminOrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOrdersTableViewController.swift; sourceTree = "<group>"; };
 		FAB9A4722AFA4A4A0087BE01 /* AdminOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOrderCell.swift; sourceTree = "<group>"; };
 		FAB9A4732AFA4A4A0087BE01 /* AdminOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminOrderCell.xib; sourceTree = "<group>"; };
+		FAB9A4762AFACD4D0087BE01 /* AdminProductDBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductDBTableViewController.swift; sourceTree = "<group>"; };
 		FAE17DD12AF784A00040C355 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		FAE17DD32AF784DD0040C355 /* AdminAuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminAuthController.swift; sourceTree = "<group>"; };
 		FAE17DDD2AF7C5C20040C355 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 		FAE17E232AF94D050040C355 /* UserCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCacher.swift; sourceTree = "<group>"; };
 		FAE17E252AF94DBD0040C355 /* CoreDataUserCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUserCacher.swift; sourceTree = "<group>"; };
 		FAE17E272AF9E06E0040C355 /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
+		FAF5B23B2AFB7B2D00B3FA38 /* AdminProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductCell.swift; sourceTree = "<group>"; };
+		FAF5B23C2AFB7B2D00B3FA38 /* AdminProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminProductCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,8 @@
 				FAE17DD32AF784DD0040C355 /* AdminAuthController.swift */,
 				FAB9A4702AFA498B0087BE01 /* AdminOrdersTableViewController.swift */,
 				FAB9A4722AFA4A4A0087BE01 /* AdminOrderCell.swift */,
+				FAB9A4762AFACD4D0087BE01 /* AdminProductDBTableViewController.swift */,
+				FAF5B23B2AFB7B2D00B3FA38 /* AdminProductCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,6 +180,7 @@
 				FAE17E0E2AF7F83B0040C355 /* ProductSheet.xib */,
 				FAE17E162AF8E2DB0040C355 /* OrderView.xib */,
 				FAB9A4732AFA4A4A0087BE01 /* AdminOrderCell.xib */,
+				FAF5B23C2AFB7B2D00B3FA38 /* AdminProductCell.xib */,
 				FA17D86C2AF51D1F00FC53C0 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -249,6 +258,7 @@
 			files = (
 				FAB9A4752AFA4A4A0087BE01 /* AdminOrderCell.xib in Resources */,
 				FAE17E182AF8E2DB0040C355 /* OrderView.xib in Resources */,
+				FAF5B23E2AFB7B2D00B3FA38 /* AdminProductCell.xib in Resources */,
 				FA17D86E2AF51D1F00FC53C0 /* LaunchScreen.storyboard in Resources */,
 				FAE17E102AF7F83B0040C355 /* ProductSheet.xib in Resources */,
 				FA17D86B2AF51D1F00FC53C0 /* Assets.xcassets in Resources */,
@@ -268,6 +278,7 @@
 				FAE17E242AF94D050040C355 /* UserCacher.swift in Sources */,
 				FAE17E1A2AF916730040C355 /* UIViewExtension.swift in Sources */,
 				FAE17DD42AF784DD0040C355 /* AdminAuthController.swift in Sources */,
+				FAF5B23D2AFB7B2D00B3FA38 /* AdminProductCell.swift in Sources */,
 				FAE17E1C2AF9280A0040C355 /* Order.swift in Sources */,
 				FAB9A4742AFA4A4A0087BE01 /* AdminOrderCell.swift in Sources */,
 				FAE17E262AF94DBD0040C355 /* CoreDataUserCacher.swift in Sources */,
@@ -287,6 +298,7 @@
 				FA17D8692AF51D1C00FC53C0 /* ScandTest.xcdatamodeld in Sources */,
 				FAE17E0F2AF7F83B0040C355 /* ProductSheet.swift in Sources */,
 				FAE17E222AF92EB40040C355 /* FirebaseRTDBOrderNetworkMananger.swift in Sources */,
+				FAB9A4772AFACD4D0087BE01 /* AdminProductDBTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
