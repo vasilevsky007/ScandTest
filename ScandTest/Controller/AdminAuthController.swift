@@ -26,27 +26,27 @@ class AdminAuthController: UIViewController {
             withIdentifier: "Logged In Segue",
             sender: nil
         )
-//        loginButton.isEnabled = false
-//        loginButton.configuration?.showsActivityIndicator = true
-//        auth.signIn(
-//            withEmail: emailField.text!,
-//            password: passwordField.text!) { 
-//                [weak self] result, error in
-//                if let error = error {
-//                    self?.errorText.text = error.localizedDescription
-//                    self?.loginButton.configuration?.showsActivityIndicator = false
-//                    self?.loginButton.isEnabled = true
-//                } else if let result = result {
-//                    self?.loginButton.configuration?.showsActivityIndicator = false
-//                    self?.loginButton.isEnabled = true
-//                    self?.performSegue(
-//                        withIdentifier: "Logged In Segue",
-//                        sender: nil
-//                    )
-//                }
-//                self?.loginButton.configuration?.showsActivityIndicator = false
-//                self?.loginButton.isEnabled = true
-//        }
+        loginButton.isEnabled = false
+        loginButton.configuration?.showsActivityIndicator = true
+        auth.signIn(
+            withEmail: emailField.text!,
+            password: passwordField.text!) { 
+                [weak self] result, error in
+                if let error = error {
+                    self?.errorText.text = error.localizedDescription
+                    self?.loginButton.configuration?.showsActivityIndicator = false
+                    self?.loginButton.isEnabled = true
+                } else if let result = result {
+                    self?.loginButton.configuration?.showsActivityIndicator = false
+                    self?.loginButton.isEnabled = true
+                    self?.performSegue(
+                        withIdentifier: "Logged In Segue",
+                        sender: nil
+                    )
+                }
+                self?.loginButton.configuration?.showsActivityIndicator = false
+                self?.loginButton.isEnabled = true
+        }
     }
     
     
