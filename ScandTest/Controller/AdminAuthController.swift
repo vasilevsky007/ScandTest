@@ -22,12 +22,9 @@ class AdminAuthController: UIViewController {
     }
     
     @IBAction func startLogIn(_ sender: UIButton) {
-        self.performSegue(
-            withIdentifier: "Logged In Segue",
-            sender: nil
-        )
         loginButton.isEnabled = false
         loginButton.configuration?.showsActivityIndicator = true
+        loginButton.tintColor = .label
         auth.signIn(
             withEmail: emailField.text!,
             password: passwordField.text!) { 
