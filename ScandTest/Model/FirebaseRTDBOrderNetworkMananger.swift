@@ -15,7 +15,11 @@ class FirebaseRTDBOrderNetworkMananger: OrderNetworkMananger {
     func sendOrder(order: Order) async throws {
         try db.child("orders")
             .child(order.id.uuidString)
-            .setValue(from: order)
+            .setValue(from: order) /* { error  in
+                if let error = error {
+                    print("error from completion handler: \(error)")
+                }
+            } */
     }
     
     func listenToNewOrders(ordersUpdatedCallback: @escaping (_ allOrders:[Order])->Void) {

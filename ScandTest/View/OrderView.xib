@@ -17,6 +17,7 @@
                 <outlet property="firstNameField" destination="e8y-Lf-cid" id="8Dx-Bz-kxV"/>
                 <outlet property="houseField" destination="k0a-i9-R0s" id="Abd-r5-RAr"/>
                 <outlet property="lastNameField" destination="kII-G7-sS8" id="VQD-7c-H4L"/>
+                <outlet property="orderButton" destination="Uwr-GJ-lKS" id="KUo-A3-Vuc"/>
                 <outlet property="phoneField" destination="yVk-vg-uEd" id="HCU-6Q-hrO"/>
                 <outlet property="productNameLabel" destination="Sap-4S-wjf" id="uMX-bi-LXD"/>
                 <outlet property="productPriceLabel" destination="lzo-QY-xE6" id="2Tb-Cx-Q47"/>
@@ -35,13 +36,13 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4HA-SB-r4t">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="560"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHF-pe-2J2">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Order:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHF-pe-2J2">
                                     <rect key="frame" x="16" y="16" width="288" height="41"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                     <color key="textColor" systemColor="systemBackgroundColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sap-4S-wjf">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sap-4S-wjf">
                                     <rect key="frame" x="16" y="65" width="288" height="26.5"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                     <color key="textColor" systemColor="systemBackgroundColor"/>
@@ -66,13 +67,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="140" height="34"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="name"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kII-G7-sS8">
                                             <rect key="frame" x="148" y="0.0" width="140" height="34"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartInsertDeleteType="yes" textContentType="family-name"/>
                                         </textField>
                                     </subviews>
                                 </stackView>
@@ -80,7 +81,7 @@
                                     <rect key="frame" x="16" y="196" width="288" height="34"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="street-address"/>
                                 </textField>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mOW-IY-ezn" userLabel="Address Stack View">
                                     <rect key="frame" x="16" y="238" width="288" height="34"/>
@@ -89,13 +90,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="140" height="34"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-line1"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apartament" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGf-RW-r79">
                                             <rect key="frame" x="148" y="0.0" width="140" height="34"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-line2"/>
                                         </textField>
                                     </subviews>
                                 </stackView>
@@ -103,13 +104,13 @@
                                     <rect key="frame" x="16" y="280" width="288" height="34"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" textContentType="tel"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bnh-DS-zoK">
                                     <rect key="frame" x="16" y="322" width="288" height="34"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwr-GJ-lKS">
                                     <rect key="frame" x="16" y="509.5" width="288" height="34.5"/>
@@ -119,6 +120,8 @@
                                     <state key="normal" title="Send Order"/>
                                     <buttonConfiguration key="configuration" style="gray" title="Send Order">
                                         <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="baseBackgroundColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.2901960784" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                     </buttonConfiguration>
                                     <connections>
                                         <action selector="sendOrder:" destination="-1" eventType="touchUpInside" id="TdY-EW-6QV"/>

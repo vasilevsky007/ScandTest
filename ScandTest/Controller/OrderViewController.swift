@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class OrderViewController: UIViewController {
+class OrderViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate  {
 
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
@@ -20,6 +20,7 @@ class OrderViewController: UIViewController {
     @IBOutlet weak var phoneField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var commentText: UITextView!
+    @IBOutlet weak var orderButton: UIButton!
     
     private var product: Product!
     private var orderManager = FirebaseRTDBOrderNetworkMananger()
@@ -45,6 +46,18 @@ class OrderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.productNameLabel.text = product.name
+        self.productPriceLabel.text = String(format: "%.2f", product.price)
+        
+        firstNameField.delegate = self
+        lastNameField.delegate = self
+        streetField.delegate = self
+        houseField.delegate = self
+        apartamentField.delegate = self
+        phoneField.delegate = self
+        emailField.delegate = self
+        commentText.delegate = self
+        
         Task {
             restoredUser = try? await userCacher?.load()
         }
@@ -82,39 +95,72 @@ class OrderViewController: UIViewController {
         }
     }
     
-    
+    func setSendState(isSending: Bool) {
+        orderButton.isEnabled = !isSending
+        orderButton.tintColor = .systemBackground
+        orderButton.configuration?.showsActivityIndicator = isSending
+    }
     
     @IBAction func sendOrder(_ sender: UIButton) {
+        setSendState(isSending: true)
         let order = Order(
             products: [product],
             user: getUserFromFields(),
             comment: commentText.text ?? "" == "" ? nil : commentText.text!
         )
-        Task {
+        Task.detached { [weak self] in
             do {
-                try await orderManager.sendOrder(order: order)
+                try await self?.orderManager.sendOrder(order: order)
+                await self?.setSendState(isSending: false)
+                try await Task.sleep(nanoseconds: 1 * 1_000_000_000)
+                await self?.navigationController?.popViewController(animated: true)
             } catch {
+                 /* somehow this will not happen if just internet is down,
+                  because FirebaseDatabase ... .setValue(from: )
+                  nor throwing error in this case through standard error
+                  handling, nor through it's completion handler */
+                await self?.setSendState(isSending: false)
                 print("error sending order: \(error)")
+                let alert = await UIAlertController(
+                    title: "Order send failed",
+                    message: error.localizedDescription,
+                    preferredStyle: .alert)
+                let ok = await UIAlertAction(
+                    title: "Got it",
+                    style: .cancel,
+                    handler: nil)
+                await alert.addAction(ok)
+                await self?.present(alert, animated: true)
             }
         }
     }
-    
-    
     
     func setup(selectedProduct product: Product) {
         self.product = product
     }
     
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case firstNameField:
+            lastNameField.becomeFirstResponder()
+        case lastNameField:
+            streetField.becomeFirstResponder()
+        case streetField:
+            houseField.becomeFirstResponder()
+        case houseField:
+            apartamentField.becomeFirstResponder()
+        case apartamentField:
+            phoneField.becomeFirstResponder()
+        case phoneField:
+            emailField.becomeFirstResponder()
+        default:
+            textField.resignFirstResponder()
+        }
+        return true
     }
-    */
-
+    
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        textView.resignFirstResponder()
+        return true
+    }
 }
