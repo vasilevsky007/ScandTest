@@ -141,17 +141,9 @@
 		FA243E872AF64BBD00D1C647 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FA243E8A2AF6500600D1C647 /* Product.swift */,
-				FA243E8C2AF6527600D1C647 /* ProductStore.swift */,
-				FA243E942AF679C200D1C647 /* ProductNetworkManager.swift */,
-				FA243E962AF67AEB00D1C647 /* FirestoreProductNetworkManager.swift */,
-				FAE17E1D2AF928B90040C355 /* User.swift */,
-				FAE17E232AF94D050040C355 /* UserCacher.swift */,
-				FAE17E252AF94DBD0040C355 /* CoreDataUserCacher.swift */,
-				FAE17E1B2AF9280A0040C355 /* Order.swift */,
-				FAE17E1F2AF92A1A0040C355 /* OrderNetworkMananger.swift */,
-				FAE17E212AF92EB40040C355 /* FirebaseRTDBOrderNetworkMananger.swift */,
-				FAE17E272AF9E06E0040C355 /* ImageFetcher.swift */,
+				FAF5B2482AFCCE5000B3FA38 /* Entities */,
+				FAF5B2492AFCCE9100B3FA38 /* Storage */,
+				FAF5B24C2AFCCEFD00B3FA38 /* Networking */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,15 +151,11 @@
 		FA243E882AF64BC900D1C647 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FAF5B2472AFCCDBA00B3FA38 /* Modals */,
+				FAF5B2462AFCCD7C00B3FA38 /* Tables */,
+				FAF5B2452AFCCD5C00B3FA38 /* Cells */,
 				FAE17DD12AF784A00040C355 /* UserViewController.swift */,
-				FAF5B23F2AFBC1A400B3FA38 /* ProductCell.swift */,
-				FAE17E0D2AF7F83B0040C355 /* ProductSheet.swift */,
-				FAE17E152AF8E2DB0040C355 /* OrderViewController.swift */,
 				FAE17DD32AF784DD0040C355 /* AdminAuthController.swift */,
-				FAB9A4702AFA498B0087BE01 /* AdminOrdersTableViewController.swift */,
-				FAB9A4722AFA4A4A0087BE01 /* AdminOrderCell.swift */,
-				FAB9A4762AFACD4D0087BE01 /* AdminProductDBTableViewController.swift */,
-				FAF5B23B2AFB7B2D00B3FA38 /* AdminProductCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,15 +163,123 @@
 		FA243E892AF64BDD00D1C647 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FAF5B2442AFCCD2F00B3FA38 /* Modals */,
+				FAF5B2432AFCCCDC00B3FA38 /* Cells */,
 				FA17D8642AF51D1C00FC53C0 /* MainView.storyboard */,
-				FAF5B2402AFBC1A400B3FA38 /* ProductCell.xib */,
-				FAE17E0E2AF7F83B0040C355 /* ProductSheet.xib */,
-				FAE17E162AF8E2DB0040C355 /* OrderView.xib */,
-				FAB9A4732AFA4A4A0087BE01 /* AdminOrderCell.xib */,
-				FAF5B23C2AFB7B2D00B3FA38 /* AdminProductCell.xib */,
 				FA17D86C2AF51D1F00FC53C0 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FAF5B2432AFCCCDC00B3FA38 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FAF5B2402AFBC1A400B3FA38 /* ProductCell.xib */,
+				FAB9A4732AFA4A4A0087BE01 /* AdminOrderCell.xib */,
+				FAF5B23C2AFB7B2D00B3FA38 /* AdminProductCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FAF5B2442AFCCD2F00B3FA38 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				FAE17E0E2AF7F83B0040C355 /* ProductSheet.xib */,
+				FAE17E162AF8E2DB0040C355 /* OrderView.xib */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		FAF5B2452AFCCD5C00B3FA38 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FAF5B23F2AFBC1A400B3FA38 /* ProductCell.swift */,
+				FAB9A4722AFA4A4A0087BE01 /* AdminOrderCell.swift */,
+				FAF5B23B2AFB7B2D00B3FA38 /* AdminProductCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FAF5B2462AFCCD7C00B3FA38 /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				FAB9A4702AFA498B0087BE01 /* AdminOrdersTableViewController.swift */,
+				FAB9A4762AFACD4D0087BE01 /* AdminProductDBTableViewController.swift */,
+			);
+			path = Tables;
+			sourceTree = "<group>";
+		};
+		FAF5B2472AFCCDBA00B3FA38 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				FAE17E0D2AF7F83B0040C355 /* ProductSheet.swift */,
+				FAE17E152AF8E2DB0040C355 /* OrderViewController.swift */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		FAF5B2482AFCCE5000B3FA38 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FA243E8A2AF6500600D1C647 /* Product.swift */,
+				FAE17E1D2AF928B90040C355 /* User.swift */,
+				FAE17E1B2AF9280A0040C355 /* Order.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		FAF5B2492AFCCE9100B3FA38 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				FAF5B24A2AFCCEC600B3FA38 /* Protocols */,
+				FAF5B24B2AFCCEE500B3FA38 /* Implementations */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		FAF5B24A2AFCCEC600B3FA38 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAE17E232AF94D050040C355 /* UserCacher.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FAF5B24B2AFCCEE500B3FA38 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				FA243E8C2AF6527600D1C647 /* ProductStore.swift */,
+				FAE17E252AF94DBD0040C355 /* CoreDataUserCacher.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		FAF5B24C2AFCCEFD00B3FA38 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FAF5B24D2AFCCF1400B3FA38 /* Protocols */,
+				FAF5B24E2AFCCF2D00B3FA38 /* Implementations */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FAF5B24D2AFCCF1400B3FA38 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA243E942AF679C200D1C647 /* ProductNetworkManager.swift */,
+				FAE17E1F2AF92A1A0040C355 /* OrderNetworkMananger.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FAF5B24E2AFCCF2D00B3FA38 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				FA243E962AF67AEB00D1C647 /* FirestoreProductNetworkManager.swift */,
+				FAE17E212AF92EB40040C355 /* FirebaseRTDBOrderNetworkMananger.swift */,
+				FAE17E272AF9E06E0040C355 /* ImageFetcher.swift */,
+			);
+			path = Implementations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
